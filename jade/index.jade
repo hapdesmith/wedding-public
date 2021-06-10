@@ -1,0 +1,255 @@
+//- styleguide.jade
+- var title = "Linda & Gilang"
+- var page = "Homepage"
+include ./includes/variable.jade
+
+doctype html
+html(lang="id")
+
+	// html head
+	head
+		include ./includes/head.jade
+
+	// body
+	body(data-spy="scroll" data-target=".nav-menu" data-offset="100")
+		//- .modal-overlay
+		//- 	.modal-dialog
+		//- 		.modal-content
+		//- 			.modal-title Grant Linda's & Gilang's wish
+		//- 			.guest-form
+		//- 				select.data-type#affiliation
+		//- 					option(data-display="Using")
+		//- 					option(value="telkomsel") Using Name
+		//- 					option(value="pertamina") Using IG ID
+		//- 					option(value="uniqlo") Uniqlo
+		//- 					option(value="xtremax") Xtremax
+		//- 					option(value="sbm") SBM ITB
+		//- 					option(value="fisika") Fisika ITB
+		//- 					option(value="korea") Korea
+		//- 					option(value="others") Others
+		//- 				input(type="text" placeholder="Your Name or Group Name")#wish-name.data-name
+		//- 			.guest-form
+		//- 				.plus-one.checkbox-wrap
+		//- 					input(type="checkbox")#plus.checkbox-input
+		//- 					label(for="plus") I will bring my plus one / friend
+		//- 			a(href="#").submit Register
+		// page header
+		include ./includes/header.jade
+
+		// page main
+		main(role="main").resize
+			audio(autoplay control loop)
+				source(src="img/sound-04.mp3" type="audio/mpeg")
+			iframe(src="img/silence.mp3" allow="autoplay" id="audio" style="display:none")
+			.sound-toggle
+				span.fa.fa-music
+			section.home#home
+				.slider-component
+					.slider-wrap
+						.slider-img
+							img(data-lazy="img/common/slider-01.JPG")
+					.slider-wrap
+						.slider-img
+							img(data-lazy="img/common/slider-02.JPG")
+					.slider-wrap
+						.slider-img
+							img(data-lazy="img/common/slider-04.JPG")
+					.slider-wrap
+						.slider-img
+							img(data-lazy="img/common/slider-05.JPG")
+				.mouse-down
+			section.counter#counter
+				.container
+					.title
+						h2 Count Down
+						.description
+							p <em>Countdown</em> to Linda and Gilang's wedding day <b class="color-pink">Saturday, 30 March 2019, 11.00 - 13.00 WIB</b>.
+					.counter-init
+			section.parallax.parallax-01.story#story(data-image="img/common/bg-parallax.jpeg")
+				.container
+					.title
+						h2 Bride & Groom
+						.description
+							p
+								| Every love story is beautiful, ours too. 
+								i.color-pink.fa.fa-heart
+					.story-component
+						.img-wrap
+							img(src="img/common/story-01.jpg")
+						.story-wrap
+							h3 Linda Pratiwi Darmadi <span class="color-pink">THE BRIDE</span>
+							.description
+								p Beautiful and independent woman, named Linda, first daughter of Bapak Irwan Darmadi (Alm) and Ibu Esih Darmadi.
+								p Born at Muara Enim, 7 January 1992.
+								.sosmed
+									a(href="https://www.instagram.com/lindapratiwidarmadi/" target="_blank")
+										i.fa.fa-instagram
+					.story-component
+						.story-wrap
+							h3 Muhammad Gilang Dwi Andika <span class="color-pink">THE GROOM</span>
+							.description
+								p Handsome and responsible man, named Gilang, second son of Bapak Anton Prasetyo and Ibu Yulia Diningsih.
+								p Born at Bandung, 26 December 1991.
+								.sosmed
+									a(href="https://www.instagram.com/gilangdwiandika/" target="_blank")
+										i.fa.fa-instagram
+						.img-wrap
+							img(src="img/common/story-02.jpg")
+			section.location#location
+				.container
+					.title
+						h2 Location
+						.description
+							p 
+								| Our wedding will be held at 
+								a.color-pink(href="https://goo.gl/maps/XkuCoiFiXRs" target="_blank") Gedung Pewayangan Kautaman, Jl. Raya Taman Mini, Pintu 1, Jakarta Timur. 
+									i.fa.fa-external-link
+							.scan
+								img(src="img/common/frame.png")
+			section.location-map#map
+			section.guest.parallax.parallax-02#guest(data-image="img/common/bg-parallax-2.JPG")
+				.container
+					.title
+						h2 Guest Registration
+						.description
+							p Words alone cannot express the gratitude in our heart for attending the wedding. We surely will feel bless to see you. Hope you had a good time. <span class="color-pink">- Linda & Gilang -</span>
+						.guest-form
+							input(type="text" placeholder="Full Name")#name.data-name
+							select.data-type#affiliation
+								option(data-display="Affiliation")
+								option(value="telkomsel") Telkomsel
+								option(value="pertamina") Pertamina
+								option(value="uniqlo") Uniqlo
+								option(value="xtremax") Xtremax
+								option(value="sbm") SBM ITB
+								option(value="fisika") Fisika ITB
+								option(value="korea") Korea
+								option(value="others") Others
+							select.data-type#relation
+								option(data-display="Relation")
+								option(value="pihak linda") Pihak Linda
+								option(value="pihak gilang") Pihak Gilang
+								option(value="pihak orang tua linda") Pihak Orang Tua Linda
+								option(value="pihak orang tua gilang") Pihak Orang Tua Gilang
+						.guest-form
+							.plus-one.checkbox-wrap
+								input(type="checkbox")#plus.checkbox-input
+								label(for="plus") I will bring my plus one / friend
+						a(href="#").submit Register
+						.message
+			section.wishlist#wishlist
+				.container
+					.title
+						h2 Wishlist
+						.description
+							p Really appreciated for you guys who have granted our wishes in this wishlist. Please message us ( Linda or Gilang ) privately, if you want to grant our wish. Thanks.
+					.wishlist-component
+						.item
+							.card.loading
+								.img-wrapper
+									img(src="img/common/wishlist-14.jpg")
+								.info-wrapper
+									.title
+										h2(data-barang="Digital Door Lock") Digital Door Lock 
+											.brand - Brand Yale type YDR3110 -
+									.links
+										//- input(type="text" placeholder="Your Instagram Username").granted-name
+										a(href="#")
+									//- .note *For multiple user, seperate IG username with comma. eg : @linda, @gilang, @lindagilang
+						.item
+							.card
+								.img-wrapper
+									img(src="img/common/wishlist-13.jpg")
+								.info-wrapper
+									.title
+										h2(data-barang="Google Home") Google Home
+											.brand - Brand Google -
+									.links
+										//- input(type="text" placeholder="Your Instagram Username").granted-name
+										a(href="#")
+									//- .note *For multiple user, seperate IG username with comma. eg : @linda, @gilang, @lindagilang
+						
+						.item
+							.card
+								.img-wrapper
+									img(src="img/common/wishlist-15.jpg")
+								.info-wrapper
+									.title
+										h2(data-barang="Cordless Vacum Cleaner") Cordless Vacum Cleaner
+											.brand - Dyson Cyclone v8 Absolute -
+									.links
+										//- input(type="text" placeholder="Your Instagram Username").granted-name
+										a(href="#")
+									//- .note *For multiple user, seperate IG username with comma. eg : @linda, @gilang, @lindagilang
+
+					.wishlist-component
+						.item.bigger
+							.card
+								.img-wrapper
+									img(src="img/common/wishlist-16a.gif")
+								.info-wrapper
+									.title
+										h2(data-barang="Dollar") Dollar
+											.brand - Just kidding guys :p -
+					.wishlist-component
+						.item.presence
+							.card
+								.img-wrapper
+									img(src="img/common/slider-01.jpeg")
+								.info-wrapper
+									.title
+										h2 Your presence at our wedding day is the best gift ever 
+											.brand - Linda & Gilang -
+					.wishlist-message
+			section.gallery#gallery
+				.container
+					.title
+						h2 Gallery
+						.description
+							p We keep this love in a photograph, We made these memories for ourselves <span class="color-pink">- Ed Sheeran -</span>
+				.gallery-component
+					.img-wrapper
+						img(src="img/gallery/gallery-01.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-02.jpg")
+					.img-wrapper
+						img(src="img/gallery/gallery-03.jpg")
+					.img-wrapper
+						img(src="img/gallery/gallery-04.jpeg")
+					.img-wrapper
+						img(src="img/gallery/gallery-05.jpg")
+					.img-wrapper
+						img(src="img/gallery/gallery-bw-01.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-bw-02.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-bw-03.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-bw-04.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-bw-05.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-for-01.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-for-02.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-for-03.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-for-04.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-for-05.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-pre-01.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-pre-02.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-pre-03.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-pre-04.JPG")
+					.img-wrapper
+						img(src="img/gallery/gallery-pre-05.JPG")
+		footer
+			span made by
+			a(href="https://www.linkedin.com/in/agungdlgs/" target="_blank") agungdlgs
+		// page script
+		include ./includes/script.jade
